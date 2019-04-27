@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.cjh.cloudnews"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    ext.anko_version = '0.10.3'
+    // Anko Commons
+    implementation "org.jetbrains.anko:anko-commons:$anko_version"
+
+    // 主要为兼容一些控件事件的协程，不过协程coroutines目前还不是kotlin的正式内容
+    implementation "org.jetbrains.anko:anko-sdk25-coroutines:$anko_version"
+    implementation "org.jetbrains.anko:anko-appcompat-v7-coroutines:$anko_version"
+
+    //    implementation "org.jetbrains.anko:anko-sqlite:$anko_version"
+    implementation "org.jetbrains.anko:anko-recyclerview-v7:$anko_version"
+
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+
+    implementation 'com.github.bumptech.glide:glide:3.5.2'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+
+}

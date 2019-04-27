@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/card_bg"
+    android:padding="10dp">
+
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/app_icon"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中国首例核辐射案受害者离世:捡一条'小链子'致残"
+            android:textSize="18dp"
+            android:textColor="#201f1f"/>
+
+        <TextView
+            android:id="@+id/digest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+
+            android:ellipsize="end"
+            android:text="还记得中国首例核辐射案受害者宋学文吗？事件发生至今已经23年了，他现在过得如何？扬子晚报紫牛新闻记者4月19日联系上了他。1996年，20岁的吉林小伙宋学文无意" />
+
+        <TextView
+            android:id="@+id/source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:textColor="#f26363"
+            android:text="新华报业网-扬子晚报"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>
